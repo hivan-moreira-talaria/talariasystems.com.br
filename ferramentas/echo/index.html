@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151022">
+  <meta name="description" content="Transforme seu teste funcional em uma primeira avaliação de performance. A Echo replica ações em sessões paralelas, com dados distintos e relatório ao final." data-i18n-content="echo.meta.description">
+  <title data-i18n="echo.meta.title">Echo — Teste funcional com carga em paralelo | Talaria Systems</title>
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../ferramentas.css">
+  <link rel="stylesheet" href="echo.css">
+  <script src="../../script.js" defer></script>
+  <script src="../../locales/catalog.js" defer></script>
+  <script src="../../i18n.js" defer></script>
+</head>
+<body class="product-page echo-page">
+  <a class="skip-link" href="#main" data-i18n="common.skip">Pular para o conteúdo</a>
+  <header class="site-header">
+    <nav class="container header-inner" aria-label="Navegação principal" data-i18n-aria-label="common.nav.label">
+      <a class="brand-signature" href="../../index.html" aria-label="Talaria Systems — início" data-i18n-aria-label="common.nav.home"><span class="brand-mark"><img src="../../branding/logos/logo-fast-lavanda-plano-v2.svg" width="1254" height="1254" alt=""></span><span class="brand-copy"><span class="brand-title">Talaria</span><span class="brand-subtitle">SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span data-i18n="common.nav.menu">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <div class="nav-links" id="navigation">
+        <details class="nav-dropdown solutions-dropdown">
+          <summary class="nav-link nav-dropdown-toggle" data-i18n="common.nav.solutions">Soluções<svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+          <div class="solutions-menu">
+            <div class="nav-menu-group">
+              <p class="nav-menu-heading" data-i18n="common.nav.tools">Ferramentas</p>
+              <a class="nav-product-link" href="../../ferramentas/aipm/index.html">
+                <span class="nav-product-name">AIPM</span>
+                <span class="nav-menu-description" data-i18n="common.nav.productDescription">Análises e relatórios de performance com IA</span>
+              </a>
+              <a class="nav-product-link" href="../../ferramentas/echo/index.html">
+                <span class="nav-product-name nav-product-name--echo" translate="no">Echo</span>
+                <span class="nav-menu-description" data-i18n="common.nav.echoDescription">Teste funcional com carga em paralelo</span>
+              </a>
+              <a class="nav-product-link" href="../../ferramentas/ariadne/index.html">
+                <span class="nav-product-name nav-product-name--ariadne" translate="no">Ariadne</span>
+                <span class="nav-menu-description" data-i18n="common.nav.ariadneDescription">Mapeamento e análise de performance com IA</span>
+              </a>
+            </div>
+            <div class="nav-menu-group">
+              <p class="nav-menu-heading" data-i18n="common.nav.services">Serviços</p>
+              <a class="nav-menu-link" href="../../servicos/performance/index.html" data-i18n="common.performance">Performance</a>
+              <a class="nav-menu-link" href="../../servicos/capacidade/index.html" data-i18n="common.capacity">Capacidade &amp; Rightsizing</a>
+              <a class="nav-menu-link" href="../../servicos/finops/index.html" data-i18n="service.finops.label">FinOps</a>
+              <a class="nav-menu-link" href="../../servicos/automacao/index.html" data-i18n="common.automation">Processos e automação</a>
+            </div>
+          </div>
+        </details>
+        <details class="nav-dropdown language-dropdown">
+          <summary class="nav-link nav-dropdown-toggle" aria-label="Idioma" data-i18n-aria-label="common.nav.language">
+            <svg class="nav-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+            <span data-current-language translate="no">PT-BR</span>
+            <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+          </summary>
+          <div class="language-menu" translate="no">
+            <button type="button" data-language="en" lang="en" aria-pressed="false"><span>EN</span>English</button>
+            <button type="button" data-language="pt-BR" lang="pt-BR" aria-pressed="true"><span>PT-BR</span>Português (Brasil)</button>
+            <button type="button" data-language="pt-PT" lang="pt-PT" aria-pressed="false"><span>PT</span>Português (Portugal)</button>
+            <button type="button" data-language="es" lang="es" aria-pressed="false"><span>ES</span>Español</button>
+          </div>
+        </details>
+        <a class="button button-small header-contact" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="common.nav.cta">Fale com a Talaria</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="product-hero" aria-labelledby="product-title">
+      <div class="container product-hero-grid">
+        <div class="product-hero-copy">
+          <p class="product-signature"><span class="product-name" translate="no">Echo</span><span data-i18n="aipm.hero.signature">Uma ferramenta Talaria Systems</span></p>
+          <h1 id="product-title" data-i18n="echo.hero.title">Você testa o fluxo.<br><span data-i18n="echo.hero.accent">A Echo multiplica.</span></h1>
+          <p class="product-lead" data-i18n="echo.hero.lead">Enquanto você faz o teste funcional, a Echo replica suas ações em sessões paralelas. Gere carga na aplicação e obtenha uma primeira visão de performance na mesma atividade.</p>
+          <p class="product-hero-detail" data-i18n="echo.hero.detail">Configure as sessões e os dados de cada uma. Conduza o fluxo no navegador e termine com um relatório de performance.</p>
+          <a class="button product-button" href="#recursos" data-i18n="echo.hero.cta">Conheça o funcionamento</a>
+        </div>
+        <div class="echo-hero-art" aria-hidden="true">
+          <div class="echo-art-orbit"></div>
+          <svg class="echo-mark" viewBox="150 175 1175 700" focusable="false">
+            <defs><filter id="echo-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="#8CAEFF" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs>
+            <image href="../../branding/ferramentas/echo/simbolo.png" width="1536" height="1024" filter="url(#echo-mark-color)"/>
+          </svg>
+          <p data-i18n="echo.hero.motif">Uma ação. Várias sessões em sincronia.</p>
+        </div>
+      </div>
+      <div class="container product-scope" aria-label="Principais recursos" data-i18n-aria-label="aipm.scope.label"><span data-i18n="echo.scope.sessions">Sessões em paralelo</span><span data-i18n="echo.scope.data">Dados por sessão</span><span data-i18n="echo.scope.metrics">Métricas de performance</span><span data-i18n="echo.scope.report">Relatório ao final</span></div>
+    </section>
+    <section class="product-section echo-showcase" id="recursos" aria-labelledby="resources-title">
+      <div class="container">
+        <div class="echo-section-intro">
+          <div><p class="eyebrow" data-i18n="echo.features.eyebrow">O foco da Echo</p><h2 class="product-heading" id="resources-title" data-i18n="echo.features.title echo.features.line2">Teste a funcionalidade.<br>Observe a performance.</h2></div>
+          <p data-i18n="echo.features.intro">Aproveite o fluxo que o QA já está executando para observar como a aplicação responde com várias sessões realizando as mesmas ações.</p>
+        </div>
+        <article class="echo-feature">
+          <div class="echo-feature-copy">
+            <p class="echo-feature-label" data-i18n="echo.replication.label">Uma sessão conduz. As outras acompanham.</p>
+            <h3 data-i18n="echo.replication.title">O mesmo fluxo, com dados diferentes.</h3>
+            <p data-i18n="echo.replication.description">Você interage com a sessão principal. A Echo replica as ações em tempo real nas demais sessões, aplicando os logins e valores configurados para cada uma.</p>
+            <ul class="echo-points"><li data-i18n="echo.replication.point1">Defina a quantidade de sessões para a execução.</li><li data-i18n="echo.replication.point2">Prepare massas de dados distintas por sessão.</li><li data-i18n="echo.replication.point3">Conduza o teste funcional enquanto as sessões geram carga.</li></ul>
+          </div>
+          <figure class="echo-preview">
+            <figcaption><span class="echo-preview-brand" translate="no">Echo</span><span class="echo-example-label" data-i18n="echo.preview.label">Prévia ilustrativa</span></figcaption>
+            <div class="echo-preview-body">
+              <h4 data-i18n="echo.preview.replication">Seu fluxo se repete em paralelo.</h4>
+              <div class="echo-session echo-session-main"><div class="echo-window-bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="echo-session-body"><span class="echo-session-role" data-i18n="echo.preview.main">QA · Sessão principal</span><strong data-i18n="echo.preview.action">Adicionar ao carrinho</strong><span class="echo-session-data" translate="no">qa_01 · R$ 120</span></div></div>
+              <div class="echo-session-branches" aria-hidden="true"><svg viewBox="0 0 400 44" preserveAspectRatio="none"><path d="M200 0V20M100 44V20H300V44"/></svg></div>
+              <div class="echo-replicas">
+                <div class="echo-session"><div class="echo-window-bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="echo-session-body"><span class="echo-session-role" data-i18n="echo.preview.session2">Sessão 02</span><strong data-i18n="echo.preview.action">Adicionar ao carrinho</strong><span class="echo-session-data" translate="no">qa_02 · R$ 85</span></div></div>
+                <div class="echo-session"><div class="echo-window-bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="echo-session-body"><span class="echo-session-role" data-i18n="echo.preview.session3">Sessão 03</span><strong data-i18n="echo.preview.action">Adicionar ao carrinho</strong><span class="echo-session-data" translate="no">qa_03 · R$ 210</span></div></div>
+              </div>
+              <p class="echo-example-note" data-i18n="echo.preview.replicationNote">Três sessões para ilustrar a replicação. A quantidade é configurada para cada execução.</p>
+            </div>
+          </figure>
+        </article>
+        <article class="echo-feature echo-feature-reverse">
+          <div class="echo-feature-copy">
+            <p class="echo-feature-label" data-i18n="echo.report.label">Da execução ao relatório</p>
+            <h3 data-i18n="echo.report.title">A visão do conjunto. O detalhe de cada sessão.</h3>
+            <p data-i18n="echo.report.description">Ao final do teste, consulte os tempos de resposta, o carregamento do frontend e os erros. Veja as métricas agregadas e compare o comportamento de cada sessão.</p>
+            <ul class="echo-points"><li data-i18n="echo.report.point1">Tempos de resposta: média, p90 e p95.</li><li data-i18n="echo.report.point2">Carregamento do frontend e marcos como DOM carregado.</li><li data-i18n="echo.report.point3">Erros e quantidade de sessões na execução.</li></ul>
+          </div>
+          <figure class="echo-preview">
+            <figcaption><span class="echo-preview-brand" translate="no">Echo</span><span class="echo-example-label" data-i18n="echo.preview.label">Prévia ilustrativa</span></figcaption>
+            <div class="echo-preview-body">
+              <p class="echo-screen-overline" data-i18n="echo.preview.reportContext">Relatório · Fluxo de compra</p>
+              <h4 data-i18n="echo.preview.reportTitle">Performance da execução</h4>
+              <p class="echo-report-summary" data-i18n="echo.preview.summary">3 sessões · Visão agregada</p>
+              <dl class="echo-metrics"><div><dt data-i18n="echo.preview.mean">Resposta média</dt><dd>280 <span translate="no">ms</span></dd></div><div><dt data-i18n="echo.preview.p90">Resposta p90</dt><dd>410 <span translate="no">ms</span></dd></div><div><dt data-i18n="echo.preview.p95">Resposta p95</dt><dd>460 <span translate="no">ms</span></dd></div></dl>
+              <div class="echo-table-wrap" role="region" aria-label="Exemplo de métricas por sessão" data-i18n-aria-label="echo.preview.tableLabel" tabindex="0">
+                <table class="echo-session-table"><caption data-i18n="echo.preview.tableTitle">Detalhamento por sessão</caption><thead><tr><th scope="col" data-i18n="echo.preview.session">Sessão</th><th scope="col" data-i18n="echo.preview.meanShort">Média</th><th scope="col" data-i18n="echo.preview.dom">DOM carregado</th><th scope="col" data-i18n="echo.preview.errors">Erros</th></tr></thead><tbody><tr><th scope="row" data-i18n="echo.preview.session1">Sessão 01</th><td translate="no">260 ms</td><td translate="no">610 ms</td><td>0</td></tr><tr><th scope="row" data-i18n="echo.preview.session2">Sessão 02</th><td translate="no">280 ms</td><td translate="no">650 ms</td><td>0</td></tr><tr><th scope="row" data-i18n="echo.preview.session3">Sessão 03</th><td translate="no">300 ms</td><td translate="no">690 ms</td><td>1</td></tr></tbody></table>
+              </div>
+              <p class="echo-example-note" data-i18n="echo.preview.reportNote">Dados fictícios para ilustrar as métricas. Não representam resultados de uma aplicação real.</p>
+            </div>
+          </figure>
+        </article>
+      </div>
+    </section>
+    <section class="product-section product-workflow" id="fluxo" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="product-intro"><p class="eyebrow" data-i18n="echo.workflow.eyebrow">Como funciona</p><h2 class="product-heading" id="workflow-title" data-i18n="echo.workflow.title">Do teste funcional à primeira visão de performance.</h2><p data-i18n="echo.workflow.intro">Uma sequência simples para configurar a carga, executar o fluxo e consultar os resultados.</p></div>
+        <ol class="product-workflow-list" role="list">
+          <li><span class="echo-flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6M16 14v6"/></svg></span><h3 data-i18n="echo.workflow.configureTitle">Configure as sessões</h3><p data-i18n="echo.workflow.configure">Defina a quantidade de sessões e os logins, valores e outros dados de cada uma.</p></li>
+          <li><span class="echo-flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM8 20h8M12 16v4M9 8l5 2-3 1z"/></svg></span><h3 data-i18n="echo.workflow.testTitle">Conduza o fluxo</h3><p data-i18n="echo.workflow.test">Faça o teste funcional na sessão principal do navegador, interagindo com a aplicação.</p></li>
+          <li><span class="echo-flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6v5H9zM3 16h6v5H3zM15 16h6v5h-6zM12 8v4M6 16v-4h12v4"/></svg></span><h3 data-i18n="echo.workflow.replicateTitle">Gere carga em paralelo</h3><p data-i18n="echo.workflow.replicate">A Echo replica suas ações em tempo real, usando os dados de cada sessão.</p></li>
+          <li><span class="echo-flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 16v-3M12 16v-5M16 16v-2"/></svg></span><h3 data-i18n="echo.workflow.reportTitle">Consulte o relatório</h3><p data-i18n="echo.workflow.report">Revise as métricas agregadas e por sessão para orientar as próximas investigações.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="product-section echo-audiences" aria-labelledby="audiences-title">
+      <div class="container echo-audiences-layout">
+        <div class="product-intro"><p class="eyebrow" data-i18n="echo.audience.eyebrow">Para quem é</p><h2 class="product-heading" id="audiences-title" data-i18n="echo.audience.title">Performance mais perto da rotina de QA.</h2><p data-i18n="echo.audience.intro">Uma avaliação inicial durante o teste funcional, com evidências para aprofundar a investigação com a equipe.</p></div>
+        <div><article class="echo-audience"><h3 data-i18n="echo.audience.qaTitle">Para quem executa o teste</h3><p data-i18n="echo.audience.qa">QA aproveita o fluxo funcional para observar tempos e erros sob carga, com dados distintos por sessão.</p></article><article class="echo-audience"><h3 data-i18n="echo.audience.teamTitle">Para quem investiga a performance</h3><p data-i18n="echo.audience.team">Desenvolvimento e performance recebem uma primeira visão do comportamento da aplicação e do que merece análise mais detalhada.</p></article></div>
+      </div>
+    </section>
+    <section class="echo-contact" aria-labelledby="contact-title"><div class="container echo-contact-inner"><div><p class="eyebrow" data-i18n="echo.contact.eyebrow">Converse com a Talaria</p><h2 id="contact-title" data-i18n="echo.contact.title">Como a Echo entra no seu fluxo de testes?</h2><p data-i18n="echo.contact.description">Conte como sua equipe testa hoje e converse sobre a avaliação de performance durante o teste funcional.</p></div><a class="button product-button" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="echo.contact.cta">Conversar sobre a Echo</a></div></section>
+  </main>
+  <footer class="product-footer"><div class="container product-footer-inner"><div><p class="product-footer-name" translate="no">Echo</p><p data-i18n="aipm.footer.signature">Uma ferramenta da Talaria Systems.</p></div><a class="text-link" href="../../index.html#solutions" data-i18n="aipm.footer.home">Conhecer a Talaria</a></div><div class="container product-footer-bottom">© <span id="copyright-year">2026</span> Talaria Systems.</div></footer>
+</body>
+</html>
