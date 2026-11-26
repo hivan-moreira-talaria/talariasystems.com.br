@@ -239,6 +239,7 @@ h1,h2,h3,p {
 }
 .nav-product-name--echo {color:#8caeff}
 .nav-product-name--ariadne {color:#f0a08c}
+.nav-product-name--chronos {color:#e8c879}
 .nav-menu-description {
   display:block;
   max-width:15rem;
@@ -935,6 +936,8 @@ a.tool-logo-link--echo:hover {
 }
 .tool-logo-link--ariadne {color:#f0a08c;background:#f0a08c08;border-color:#f0a08c38}
 a.tool-logo-link--ariadne:hover {background:#f0a08c0d;border-color:#f0a08c4d}
+.tool-logo-link--chronos {color:#e8c879;background:#e8c87908;border-color:#e8c87938}
+a.tool-logo-link--chronos:hover {background:#e8c8790d;border-color:#e8c8794d}
 .solutions a:focus-visible {
   outline-color:var(--text)
 }
