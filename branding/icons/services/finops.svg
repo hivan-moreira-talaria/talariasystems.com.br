@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>FinOps — custo e consumo de tecnologia</title>
+  <defs>
+    <linearGradient id="finops-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="finops-coin" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#765198"/><stop offset=".6" stop-color="#a47ed1"/><stop offset="1" stop-color="#765198"/></linearGradient>
+  </defs>
+  <path d="m64 74 53 25-53 25-53-25Z" fill="#30243e" stroke="#b392f0" stroke-opacity=".25"/>
+  <path d="m83 19 28 14-28 14-28-14Zm-28 14v42l28 14 28-14V33M83 47v42" fill="#b392f0" fill-opacity=".035" stroke="#cfb4f4" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 4" stroke-linejoin="round"/>
+  <path d="m66 59 17 8v24l-17-8Z" fill="#654586"/>
+  <path d="m83 67 17-8v24l-17 8Z" fill="#9670c6"/>
+  <path d="m83 51 17 8-17 8-17-8Z" fill="url(#finops-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="m72 74 6 3m12 5 5-2" stroke="#eadbff" stroke-opacity=".6" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M15 92v11c0 5 9 9 20 9s20-4 20-9V92" fill="url(#finops-coin)" stroke="#b392f0" stroke-opacity=".35"/>
+  <ellipse cx="35" cy="92" rx="20" ry="9" fill="url(#finops-top)" stroke="#e2d0ff" stroke-opacity=".45"/>
+  <path d="M15 76v11c0 5 9 9 20 9s20-4 20-9V76" fill="url(#finops-coin)" stroke="#b392f0" stroke-opacity=".35"/>
+  <ellipse cx="35" cy="76" rx="20" ry="9" fill="url(#finops-top)" stroke="#e2d0ff" stroke-opacity=".45"/>
+  <ellipse cx="35" cy="76" rx="12" ry="5" stroke="#68468b" stroke-width="1.2"/>
+  <path d="m32 73 6 6m-6 0 6-6" stroke="#68468b" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="m20 86 4 2m23-2 4-2m-31 18 4 2m23-2 4-2" stroke="#d8c0f9" stroke-opacity=".5" stroke-linecap="round"/>
+  <path d="M72 42v-9h18" stroke="#f4b860" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

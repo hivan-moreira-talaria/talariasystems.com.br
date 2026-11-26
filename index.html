@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151022">
-  <meta name="description" content="Engenharia de Eficiência em Performance, Capacidade e FinOps. Análise especializada, acompanhamento contínuo e desenvolvimento de soluções apoiados por Inteligência Artificial.">
-  <title>Talaria Systems — Engenharia de Eficiência</title>
+  <meta name="description" content="Engenharia de Eficiência em Performance, Capacidade &amp; Rightsizing e FinOps. Análise especializada, acompanhamento contínuo e soluções apoiadas por Inteligência Artificial." data-i18n-content="home.meta.description">
+  <title data-i18n="home.meta.title">Talaria Systems — Engenharia de Eficiência</title>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +13,50 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="locales/catalog.js" defer></script>
+  <script src="i18n.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Pular para o conteúdo</a>
   <header class="site-header">
-    <nav class="container header-inner" aria-label="Navegação principal">
-      <a class="brand-signature" href="#home" aria-label="Talaria Systems — início"><span class="brand-mark"><img src="branding/logos/logo-fast-lavanda-plano-v2.svg" width="1254" height="1254" alt=""></span><span class="brand-copy"><span class="brand-title">Talaria</span><span class="brand-subtitle">SYSTEMS</span></span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
-      <ul class="nav-links" id="navigation"><li><a href="#services" class="nav-link">Atuação</a></li><li><a href="#approach" class="nav-link">Abordagem</a></li><li><a href="#solutions" class="nav-link">Soluções</a></li><li><a href="#about" class="nav-link">A Talaria</a></li><li class="mobile-contact"><a href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" class="nav-link">Contato</a></li></ul>
-      <a class="button button-small header-contact" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Vamos conversar</a>
+    <nav class="container header-inner" aria-label="Navegação principal" data-i18n-aria-label="common.nav.label">
+      <a class="brand-signature" href="index.html" aria-label="Talaria Systems — início" data-i18n-aria-label="common.nav.home"><span class="brand-mark"><img src="branding/logos/logo-fast-lavanda-plano-v2.svg" width="1254" height="1254" alt=""></span><span class="brand-copy"><span class="brand-title">Talaria</span><span class="brand-subtitle">SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span data-i18n="common.nav.menu">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <div class="nav-links" id="navigation">
+        <details class="nav-dropdown solutions-dropdown">
+          <summary class="nav-link nav-dropdown-toggle" data-i18n="common.nav.solutions">Soluções<svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+          <div class="solutions-menu">
+            <div class="nav-menu-group">
+              <p class="nav-menu-heading" data-i18n="common.nav.tools">Ferramentas</p>
+              <a class="nav-product-link" href="ferramentas/aipm/index.html">
+                <span class="nav-product-name">AIPM</span>
+                <span class="nav-menu-description" data-i18n="common.nav.productDescription">Análises e relatórios de performance com IA</span>
+              </a>
+            </div>
+            <div class="nav-menu-group">
+              <p class="nav-menu-heading" data-i18n="common.nav.services">Serviços</p>
+              <a class="nav-menu-link" href="servicos/performance/index.html" data-i18n="common.performance">Performance</a>
+              <a class="nav-menu-link" href="servicos/capacidade/index.html" data-i18n="common.capacity">Capacidade &amp; Rightsizing</a>
+              <a class="nav-menu-link" href="servicos/finops/index.html" data-i18n="service.finops.label">FinOps</a>
+              <a class="nav-menu-link" href="servicos/automacao/index.html" data-i18n="common.automation">Processos e automação</a>
+            </div>
+          </div>
+        </details>
+        <details class="nav-dropdown language-dropdown">
+          <summary class="nav-link nav-dropdown-toggle" aria-label="Idioma" data-i18n-aria-label="common.nav.language">
+            <svg class="nav-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+            <span data-current-language translate="no">PT-BR</span>
+            <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+          </summary>
+          <div class="language-menu" translate="no">
+            <button type="button" data-language="en" lang="en" aria-pressed="false"><span>EN</span>English</button>
+            <button type="button" data-language="pt-BR" lang="pt-BR" aria-pressed="true"><span>PT-BR</span>Português (Brasil)</button>
+            <button type="button" data-language="pt-PT" lang="pt-PT" aria-pressed="false"><span>PT</span>Português (Portugal)</button>
+            <button type="button" data-language="es" lang="es" aria-pressed="false"><span>ES</span>Español</button>
+          </div>
+        </details>
+        <a class="button button-small header-contact" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="common.nav.cta">Fale com a Talaria</a>
+      </div>
     </nav>
   </header>
   <main id="main">
@@ -29,20 +64,20 @@
       <div class="hero-art" aria-hidden="true"><img src="branding/assets/isometrico-capacidade-v1.png" alt="" fetchpriority="high"></div>
       <div class="container hero-content">
         <div class="hero-copy">
-          <p class="eyebrow">Ferramentas + consultoria especializada</p>
-          <h1 id="hero-title">Engenharia de<br><span>Eficiência</span></h1>
-          <p class="hero-description">Performance, Capacidade e FinOps com análise especializada, acompanhamento contínuo e desenvolvimento de soluções apoiados por <strong>Inteligência Artificial</strong>.</p>
-          <div class="hero-actions"><a class="button" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Conversar sobre meu cenário</a><a class="text-link" href="#approach">Conhecer a abordagem</a></div>
+          <p class="eyebrow" data-i18n="home.hero.eyebrow">Ferramentas + consultoria especializada</p>
+          <h1 id="hero-title" data-i18n="home.hero.title">Engenharia de<br><span data-i18n="home.hero.titleAccent">Eficiência</span></h1>
+          <p class="hero-description" data-i18n="home.hero.description -">Performance, Capacidade &amp; Rightsizing e FinOps com análise especializada, acompanhamento contínuo e desenvolvimento de soluções apoiados por <strong data-i18n="common.ai">Inteligência Artificial</strong>.</p>
+          <div class="hero-actions"><a class="button" href="#services" data-i18n="home.hero.primary">Conheça nossa abordagem</a><a class="text-link" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="home.hero.secondary">Fale com um especialista</a></div>
         </div>
-        <div class="hero-scope"><span>Performance</span><span>Capacidade</span><span>Testes contínuos</span><span>FinOps</span><span>Rightsizing</span></div>
+        <div class="hero-scope"><span data-i18n="common.performance">Performance</span><span data-i18n="common.capacity">Capacidade &amp; Rightsizing</span><span data-i18n="home.hero.continuousTests">Testes contínuos</span><span>FinOps</span></div>
       </div>
     </section>
     <section class="section expertise" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-intro">
-          <p class="eyebrow">O ciclo de Eficiência</p>
+          <p class="eyebrow" data-i18n="home.cycle.eyebrow">O ciclo de Eficiência</p>
           <div>
-            <h2 class="section-title" id="services-title">Um ciclo de melhoria contínua.</h2>
+            <h2 class="section-title" id="services-title" data-i18n="home.cycle.title">Um ciclo de melhoria contínua.</h2>
           </div>
         </div>
         <figure class="cycle-figure">
@@ -58,47 +93,49 @@
                 </marker>
               </defs>
               <circle class="cycle-orbit" cx="560" cy="340" r="196"></circle>
-              <circle class="cycle-ai-orbit" cx="560" cy="340" r="162"></circle>
               <g class="cycle-spokes">
                 <path d="M560 178V144M722 340H756M560 502V536M398 340H364"></path>
               </g>
-              <g class="cycle-flows" marker-end="url(#cycle-arrow)">
-                <path d="M627 156A196 196 0 0 1 744 273"></path>
-                <path d="M744 407A196 196 0 0 1 627 524"></path>
-                <path d="M493 524A196 196 0 0 1 376 407"></path>
-                <path d="M376 273A196 196 0 0 1 493 156"></path>
-              </g>
-              <g class="cycle-junctions">
-                <circle cx="560" cy="144" r="5"></circle>
-                <circle cx="756" cy="340" r="5"></circle>
-                <circle cx="560" cy="536" r="5"></circle>
-                <circle cx="364" cy="340" r="5"></circle>
+              <g class="cycle-rotor">
+                <circle class="cycle-ai-orbit" cx="560" cy="340" r="162"></circle>
+                <g class="cycle-flows" marker-end="url(#cycle-arrow)">
+                  <path d="M627 156A196 196 0 0 1 744 273"></path>
+                  <path d="M744 407A196 196 0 0 1 627 524"></path>
+                  <path d="M493 524A196 196 0 0 1 376 407"></path>
+                  <path d="M376 273A196 196 0 0 1 493 156"></path>
+                </g>
+                <g class="cycle-junctions">
+                  <circle cx="560" cy="144" r="5"></circle>
+                  <circle cx="756" cy="340" r="5"></circle>
+                  <circle cx="560" cy="536" r="5"></circle>
+                  <circle cx="364" cy="340" r="5"></circle>
+                </g>
               </g>
             </svg>
             <div class="cycle-core">
-              <p class="cycle-core-title">Engenharia de<br>Eficiência</p>
-              <p class="cycle-ai-label">Inteligência Artificial<span>em todo o ciclo</span></p>
+              <p class="cycle-core-title" data-i18n="home.hero.title home.hero.titleAccent">Engenharia de<br>Eficiência</p>
+              <p class="cycle-ai-label" data-i18n="common.ai">Inteligência Artificial<span data-i18n="home.cycle.ai">em todo o ciclo</span></p>
             </div>
-            <ol class="cycle-stages" role="list" aria-label="Frentes do ciclo de Engenharia de Eficiência">
-              <li class="cycle-stage cycle-performance">
-                <h3>Performance</h3>
-                <p>Testes e análise para entender limites, validar o comportamento e identificar gargalos.</p>
+            <ol class="cycle-stages" role="list" aria-label="Frentes do ciclo de Engenharia de Eficiência" data-i18n-aria-label="home.cycle.label">
+              <li class="cycle-stage cycle-performance" id="performance">
+                <h3><a class="cycle-service-link" href="servicos/performance/index.html" data-i18n="common.performance">Performance</a></h3>
+                <p data-i18n="home.cycle.performance">Testes e análise para entender limites, validar o comportamento e identificar gargalos.</p>
               </li>
-              <li class="cycle-stage cycle-capacity">
-                <h3>Capacidade</h3>
-                <p>Demanda e utilização para orientar o dimensionamento e preparar a evolução dos sistemas.</p>
+              <li class="cycle-stage cycle-capacity" id="capacity">
+                <h3><a class="cycle-service-link" href="servicos/capacidade/index.html" data-i18n="common.capacity">Capacidade &amp; Rightsizing</a></h3>
+                <p data-i18n="home.cycle.capacity">Demanda, utilização e rightsizing para adequar os recursos ao uso real e preparar o crescimento.</p>
               </li>
-              <li class="cycle-stage cycle-finops">
-                <h3>FinOps &amp; Rightsizing</h3>
-                <p>Consumo, custo e desempenho para ajustar os recursos ao que a operação precisa.</p>
+              <li class="cycle-stage cycle-finops" id="finops">
+                <h3><a class="cycle-service-link" href="servicos/finops/index.html" data-i18n="service.finops.label">FinOps</a></h3>
+                <p data-i18n="home.cycle.finops">Custos, consumo e prioridades para dar visibilidade aos gastos e orientar decisões de eficiência.</p>
               </li>
-              <li class="cycle-stage cycle-automation">
-                <h3>Processos e automação</h3>
-                <p>Testes recorrentes, comparação de histórico e documentação para acompanhar os sistemas.</p>
+              <li class="cycle-stage cycle-automation" id="automation">
+                <h3><a class="cycle-service-link" href="servicos/automacao/index.html" data-i18n="common.automation">Processos e automação</a></h3>
+                <p data-i18n="home.cycle.automation">Testes recorrentes, comparação de histórico e documentação para acompanhar os sistemas.</p>
               </li>
             </ol>
           </div>
-          <figcaption class="cycle-caption">Cada execução gera evidências para novos ajustes. O ciclo continua conforme os sistemas e a demanda evoluem.</figcaption>
+          <figcaption class="cycle-caption" data-i18n="home.cycle.caption">Cada execução gera evidências para novos ajustes. O ciclo continua conforme os sistemas e a demanda evoluem.</figcaption>
         </figure>
       </div>
     </section>
@@ -106,8 +143,8 @@
       <div class="section-art" aria-hidden="true"><img src="branding/assets/isometrico-fluxos-v1.png" alt="" loading="lazy"></div>
       <div class="container">
         <div class="approach-intro">
-          <p class="eyebrow">O diferencial da entrega</p>
-          <h2 class="section-title" id="approach-title">Mais valor com menos esforço repetitivo.</h2>
+          <p class="eyebrow" data-i18n="home.approach.eyebrow">O diferencial da entrega</p>
+          <h2 class="section-title" id="approach-title" data-i18n="home.approach.title">Mais valor com menos esforço repetitivo.</h2>
         </div>
         <div class="method-journey">
           <svg class="method-route" viewBox="0 0 1200 144" preserveAspectRatio="none" aria-hidden="true" focusable="false">
@@ -123,16 +160,16 @@
             <path class="method-route-halo" d="M18 144C160 144 188 96 318 96S488 48 618 48S788 0 918 0H1180"></path>
             <path class="method-route-line" d="M18 144C160 144 188 96 318 96S488 48 618 48S788 0 918 0H1180" marker-end="url(#method-route-arrow)"></path>
           </svg>
-          <svg class="method-ai" viewBox="0 0 48 48" role="img" aria-label="Inteligência Artificial conectada a todas as quatro etapas da entrega">
+          <svg class="method-ai" viewBox="0 0 48 48" role="img" aria-label="Inteligência Artificial conectada a todas as quatro etapas da entrega" data-i18n-aria-label="home.approach.aiLabel">
             <path d="M16 9V3M24 9V3M32 9V3M16 39V45M24 39V45M32 39V45M9 16H3M9 24H3M9 32H3M39 16H45M39 24H45M39 32H45" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
             <rect x="9" y="9" width="30" height="30" rx="6" fill="#241a35" stroke="currentColor" stroke-width="1.3"></rect>
-            <text x="24" y="29" text-anchor="middle">IA</text>
+            <text x="24" y="29" text-anchor="middle" data-i18n="common.aiShort">IA</text>
           </svg>
-          <ol class="method-grid" role="list" aria-label="Da entrega tradicional à evolução contínua">
-            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3>Entrega tradicional</h3><p>Analisar, estruturar e automatizar: o ponto de partida que já se espera de uma entrega técnica.</p></li>
-            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3>Validação contínua</h3><p>Reexecutar testes e comparar resultados para perceber desvios, inclusive entre deploys.</p></li>
-            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3>Conhecimento acumulado</h3><p>Histórico e documentação dão contexto às decisões e evitam refazer a análise do zero.</p></li>
-            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3>Soluções que evoluem</h3><p>Desenvolver soluções que ampliam o acompanhamento com menos intervenção manual.</p></li>
+          <ol class="method-grid" role="list" aria-label="Da entrega tradicional à evolução contínua" data-i18n-aria-label="home.approach.stepsLabel">
+            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3 data-i18n="home.approach.traditionalTitle">Entrega tradicional</h3><p data-i18n="home.approach.traditional">Analisar, estruturar e automatizar: o ponto de partida que já se espera de uma entrega técnica.</p></li>
+            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3 data-i18n="home.approach.validationTitle">Validação contínua</h3><p data-i18n="home.approach.validation">Reexecutar testes e comparar resultados para perceber desvios, inclusive entre deploys.</p></li>
+            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3 data-i18n="home.approach.knowledgeTitle">Conhecimento acumulado</h3><p data-i18n="home.approach.knowledge">Histórico e documentação dão contexto às decisões e evitam refazer a análise do zero.</p></li>
+            <li class="method-step"><span class="method-direction" aria-hidden="true">&gt;</span><h3 data-i18n="home.approach.evolutionTitle">Soluções que evoluem</h3><p data-i18n="home.approach.evolution">Desenvolver soluções que ampliam o acompanhamento com menos intervenção manual.</p></li>
           </ol>
         </div>
       </div>
@@ -140,33 +177,33 @@
     <section class="section solutions" id="solutions" aria-labelledby="solutions-title">
       <div class="container">
         <div class="section-intro">
-          <p class="eyebrow">Duas frentes, a mesma visão</p>
-          <h2 class="section-title" id="solutions-title">Ferramentas e consultoria. Engenharia aplicada.</h2>
+          <p class="eyebrow" data-i18n="home.solutions.eyebrow">Duas frentes, a mesma visão</p>
+          <h2 class="section-title" id="solutions-title" data-i18n="home.solutions.title">Ferramentas e consultoria. Engenharia aplicada.</h2>
         </div>
         <div class="solutions-grid">
           <article class="solution" aria-labelledby="tools-title">
-            <div class="solution-visual" aria-hidden="true">
-              <svg viewBox="0 0 600 240" focusable="false">
-                <defs>
-                  <linearGradient id="tools-module-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7c1ff"></stop><stop offset="1" stop-color="#a681d6"></stop></linearGradient>
-                  <g id="tools-module">
-                    <path d="M0-28 48 0 0 28-48 0Z" fill="url(#tools-module-top)"></path>
-                    <path d="M-48 0 0 28V72L-48 44Z" fill="#6e4e99"></path>
-                    <path d="M0 28 48 0V44L0 72Z" fill="#9470c2"></path>
-                    <path d="M-48 0 0 28 48 0M0 28V72" fill="none" stroke="#f0eaff" stroke-opacity=".2"></path>
-                  </g>
-                </defs>
-                <path d="M300 28 540 144 300 224 60 144Z M180 86 420 184M420 86 180 184M300 28V224" fill="none" stroke="#b392f0" stroke-opacity=".18"></path>
-                <path d="M160 105 300 72 440 105" fill="none" stroke="#c7a9f3" stroke-width="2" stroke-dasharray="4 5"></path>
-                <use href="#tools-module" transform="translate(160 105) scale(.85)"></use>
-                <use href="#tools-module" transform="translate(300 72) scale(1.1)"></use>
-                <use href="#tools-module" transform="translate(440 105) scale(.85)"></use>
-              </svg>
+            <div class="solution-visual solution-visual--tools" aria-hidden="true">
+              <img src="branding/exploracoes-ferramentas/ferramentas-v1-plataforma-modular-transparente-v2.png" alt="" width="1984" height="793" loading="lazy" decoding="async">
             </div>
             <div class="solution-copy">
-              <h3 id="tools-title">Ferramentas</h3>
-              <p>Desenvolvimento de soluções para automatizar testes, comparar resultados e manter o histórico acessível.</p>
-              <a class="button button-small" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Conversar sobre ferramentas</a>
+              <h3 id="tools-title" data-i18n="common.nav.tools">Ferramentas</h3>
+              <p data-i18n="home.solutions.tools">Soluções para automatizar análises e relatórios de performance, comparar resultados e manter o histórico acessível.</p>
+              <nav class="tool-logos" aria-label="Ferramentas" data-i18n-aria-label="common.nav.tools">
+              <a class="tool-logo-link" href="ferramentas/aipm/index.html" aria-label="Conhecer a AIPM" data-i18n-aria-label="common.aipmLink">
+                <svg viewBox="250 200 1050 600" aria-hidden="true" focusable="false">
+                  <defs><filter id="aipm-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs>
+                  <image href="branding/ferramentas/aipm/marca-original.png" width="1536" height="1024" filter="url(#aipm-home-mark-color)"/>
+                </svg>
+                <span>AIPM</span>
+              </a>
+              <div class="tool-logo-link tool-logo-link--echo" translate="no">
+                <svg viewBox="150 175 1175 700" aria-hidden="true" focusable="false">
+                  <defs><filter id="echo-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs>
+                  <image href="branding/ferramentas/echo/simbolo.png" width="1536" height="1024" filter="url(#echo-home-mark-color)"/>
+                </svg>
+                <span translate="no">Echo</span>
+              </div>
+              </nav>
             </div>
           </article>
           <article class="solution" aria-labelledby="consulting-title">
@@ -184,9 +221,14 @@
               </svg>
             </div>
             <div class="solution-copy">
-              <h3 id="consulting-title">Consultoria</h3>
-              <p>Análise especializada para entender gargalos, orientar o dimensionamento e ajustar o uso dos recursos.</p>
-              <a class="button button-small" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Conversar sobre consultoria</a>
+              <h3 id="consulting-title" data-i18n="home.solutions.consultingTitle">Consultoria</h3>
+              <p data-i18n="home.solutions.consulting">Análise especializada para entender gargalos, orientar o dimensionamento e ajustar o uso dos recursos.</p>
+              <nav class="consulting-services" aria-label="Serviços" data-i18n-aria-label="common.nav.services">
+                <a href="servicos/performance/index.html"><img src="branding/icons/services/performance.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="common.performance">Performance</span></a>
+                <a href="servicos/capacidade/index.html"><img src="branding/icons/services/capacidade.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="common.capacity">Capacidade &amp; Rightsizing</span></a>
+                <a href="servicos/finops/index.html"><img src="branding/icons/services/finops.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="service.finops.label">FinOps</span></a>
+                <a href="servicos/automacao/index.html"><img src="branding/icons/services/automacao.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="common.automation">Processos e automação</span></a>
+              </nav>
             </div>
           </article>
         </div>
@@ -195,25 +237,25 @@
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
         <div class="about-copy">
-          <p class="eyebrow">À frente da Talaria</p>
+          <p class="eyebrow" data-i18n="home.about.eyebrow">À frente da Talaria</p>
           <h2 class="section-title" id="about-title">Hivan Moreira</h2>
-          <p>Tenho 8 anos de experiência em tecnologia, atuando com Performance e Capacidade em grandes empresas. Criei a Talaria para transformar essa vivência em soluções que unem análise especializada, testes contínuos e automação para antecipar gargalos, dimensionar recursos e reduzir retrabalho.</p>
-          <p>Minha visão é ampliar esse trabalho com Inteligência Artificial, fazendo com que cada análise gere conhecimento e sustente a evolução dos sistemas. Conduzo pessoalmente cada projeto, da compreensão do cenário ao desenvolvimento das soluções.</p>
-          <a class="button" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Conversar comigo</a>
+          <p data-i18n="home.about.experience">Tenho 8 anos de experiência em tecnologia, atuando com Performance e Capacidade em grandes empresas. Criei a Talaria para transformar essa vivência em soluções que unem análise especializada, testes contínuos e automação para antecipar gargalos, dimensionar recursos e reduzir retrabalho.</p>
+          <p data-i18n="home.about.vision">Minha visão é ampliar esse trabalho com Inteligência Artificial, fazendo com que cada análise gere conhecimento e sustente a evolução dos sistemas. Conduzo pessoalmente cada projeto, da compreensão do cenário ao desenvolvimento das soluções.</p>
+          <a class="button" href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="home.about.cta">Conversar comigo</a>
         </div>
         <figure class="founder-portrait">
           <img src="branding/portraits/hivan-moreira-retrato-v2.png" alt="Hivan Moreira" width="1122" height="1402" loading="lazy">
-          <figcaption><span>Hivan Moreira</span><span>Fundador da Talaria Systems</span></figcaption>
+          <figcaption><span>Hivan Moreira</span><span data-i18n="home.about.founder">Fundador da Talaria Systems</span></figcaption>
         </figure>
       </div>
       <div class="container career">
         <div class="career-heading">
           <div>
-            <h3 id="career-title">Empresas onde atuei</h3>
+            <h3 id="career-title" data-i18n="home.career.title">Empresas onde atuei</h3>
           </div>
         </div>
-        <p class="visually-hidden" id="career-motion-hint">A faixa pausa quando o cursor permanece sobre ela por meio segundo, ou ao receber foco. Clique ou pressione Espaço para manter a animação pausada.</p>
-        <div class="clients-viewport" id="career-viewport" tabindex="0" role="region" aria-roledescription="carrossel" aria-labelledby="career-title" aria-describedby="career-motion-hint">
+        <p class="visually-hidden" id="career-motion-hint" data-i18n="home.career.hint">A faixa pausa quando o cursor permanece sobre ela por meio segundo, ou ao receber foco. Clique ou pressione Espaço para manter a animação pausada.</p>
+        <div class="clients-viewport" id="career-viewport" tabindex="0" role="region" aria-roledescription="carrossel" aria-labelledby="career-title" aria-describedby="career-motion-hint" data-i18n-aria-roledescription="home.career.carousel">
           <div class="clients-track">
           <ul class="clients-list" role="list">
             <li class="client-logo client-logo-compact"><img src="branding/logos/clientes/burger-king-transparent.svg" alt="Burger King" width="569" height="620" loading="lazy" decoding="async"></li>
@@ -235,6 +277,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-main"><div><a class="brand-signature footer-brand" href="#home" aria-label="Talaria Systems — início"><span class="brand-mark"><img src="branding/logos/logo-fast-lavanda-plano-v2.svg" width="1254" height="1254" alt="" loading="lazy"></span><span class="brand-copy"><span class="brand-title">Talaria</span><span class="brand-subtitle">SYSTEMS</span></span></a><p>Ferramentas e consultoria em performance,<br>capacidade e eficiência de sistemas.</p></div><nav aria-label="Navegação do rodapé"><a href="#services">Atuação</a><a href="#approach">Abordagem</a><a href="#solutions">Soluções</a><a href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener">Contato</a></nav></div><div class="container footer-bottom"><p>© <span id="copyright-year">2026</span> Talaria Systems.</p><p>Conhecimento técnico. Processos. Continuidade.</p></div></footer>
+  <footer class="site-footer"><div class="container footer-main"><div><a class="brand-signature footer-brand" href="#home" aria-label="Talaria Systems — início" data-i18n-aria-label="common.nav.home"><span class="brand-mark"><img src="branding/logos/logo-fast-lavanda-plano-v2.svg" width="1254" height="1254" alt="" loading="lazy"></span><span class="brand-copy"><span class="brand-title">Talaria</span><span class="brand-subtitle">SYSTEMS</span></span></a><p data-i18n="home.footer.line1 home.footer.line2">Ferramentas e consultoria em performance,<br>capacidade e eficiência de sistemas.</p></div><nav aria-label="Navegação do rodapé" data-i18n-aria-label="common.nav.footer"><a href="#services" data-i18n="common.nav.expertise">Atuação</a><a href="#approach" data-i18n="common.nav.approach">Abordagem</a><a href="#solutions" data-i18n="common.nav.solutions">Soluções</a><a href="https://outlook.office.com/book/AvaliaoInicialTalariaSystems@talariasystems.com.br/" target="_blank" rel="noopener" data-i18n="common.nav.contact">Contato</a></nav></div><div class="container footer-bottom"><p>© <span id="copyright-year">2026</span> Talaria Systems.</p><p data-i18n="home.footer.tagline">Conhecimento técnico. Processos. Continuidade.</p></div></footer>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>Processos e automação — continuidade entre execuções</title>
+  <defs>
+    <linearGradient id="automation-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="automation-gear" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cfb2f4"/><stop offset="1" stop-color="#9670c6"/></linearGradient>
+    <path id="automation-cog" d="M59 34h10l2 7 7 4 7-2 5 9-5 5v8l5 5-5 9-7-2-7 4-2 7H59l-2-7-7-4-7 2-5-9 5-5v-8l-5-5 5-9 7 2 7-4Z"/>
+  </defs>
+  <path d="m64 74 53 25-53 25-53-25Z" fill="#30243e" stroke="#b392f0" stroke-opacity=".25"/>
+  <path d="M29 88C9 61 27 28 64 28s55 33 35 60c-15 22-55 22-70 0Z" stroke="#b392f0" stroke-opacity=".65" stroke-width="1.6"/>
+  <path d="m47 31 6-2m47 21 3 6m-16 41-6 3" stroke="#e2d0ff" stroke-width="2" stroke-linecap="round"/>
+  <path d="m14 86 17 8v10l-17-8Z" fill="#654586"/>
+  <path d="m31 94 17-8v10l-17 8Z" fill="#9670c6"/>
+  <path d="m31 78 17 8-17 8-17-8Z" fill="url(#automation-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="m80 86 17 8v10l-17-8Z" fill="#654586"/>
+  <path d="m97 94 17-8v10l-17 8Z" fill="#9670c6"/>
+  <path d="m97 78 17 8-17 8-17-8Z" fill="url(#automation-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <use href="#automation-cog" transform="translate(0 6)" fill="#68468b"/>
+  <use href="#automation-cog" fill="url(#automation-gear)" stroke="#eadbff" stroke-opacity=".45" stroke-width="1.2"/>
+  <circle cx="64" cy="61" r="11" fill="#30243e" stroke="#d7c1ff" stroke-opacity=".6" stroke-width="1.5"/>
+  <path d="m59 61 4 4 7-9" stroke="#eadbff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="99" cy="88" r="3" fill="#f4b860"/>
+  <path d="m25 87 6 3 6-3m54 0 6 3" stroke="#68468b" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

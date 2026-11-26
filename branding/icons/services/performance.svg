@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>Performance — comportamento sob carga</title>
+  <defs>
+    <linearGradient id="perf-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="perf-right" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ad86df"/><stop offset="1" stop-color="#765198"/></linearGradient>
+  </defs>
+  <path d="m64 74 53 25-53 25-53-25Z" fill="#30243e" stroke="#b392f0" stroke-opacity=".25"/>
+  <path d="m64 84 33 15-33 15-33-15Z" stroke="#b392f0" stroke-opacity=".13"/>
+  <path d="M76 16 91 23v48l-15-7Z" fill="#654586"/>
+  <path d="m91 23 15-7v48l-15 7Z" fill="url(#perf-right)"/>
+  <path d="m91 9 15 7-15 7-15-7Z" fill="url(#perf-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="M48 43 63 50v34l-15-7Z" fill="#654586"/>
+  <path d="m63 50 15-7v34l-15 7Z" fill="url(#perf-right)"/>
+  <path d="m63 36 15 7-15 7-15-7Z" fill="url(#perf-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="M20 69 35 76v20l-15-7Z" fill="#654586"/>
+  <path d="m35 76 15-7v20l-15 7Z" fill="url(#perf-right)"/>
+  <path d="m35 62 15 7-15 7-15-7Z" fill="url(#perf-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="M8 59h13m-8 8h8M5 75h11" stroke="#b392f0" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M16 57h17l11-19 13 7 12-22 14 6 22-17" stroke="#f0eaff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="105" cy="12" r="3.5" fill="#f4b860"/>
+  <path d="m20 103 15 7m13-5 15 7m13-19 15 7" stroke="#b392f0" stroke-opacity=".5" stroke-linecap="round"/>
+</svg>

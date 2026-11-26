@@ -4,41 +4,62 @@
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   const navigation = document.getElementById('navigation');
-  const links = Array.from(document.querySelectorAll('.nav-link'));
+  const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+  function fitSolutionsMenu() {
+    const solutions = header?.querySelector('.solutions-dropdown');
+    if (!solutions) return;
+    const menuWidth = 34 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const available = window.innerWidth - solutions.getBoundingClientRect().left - 24;
+    solutions.classList.toggle('is-stacked', menuWidth > available);
+  }
+  function closeDropdowns(except = null) {
+    dropdowns.forEach(dropdown => { if (dropdown !== except) dropdown.open = false; });
+  }
   function setMenuOpen(open, returnFocus = false) {
     if (!toggle || !navigation) return;
     toggle.setAttribute('aria-expanded', String(open));
     navigation.classList.toggle('is-open', open);
+    if (!open) closeDropdowns();
     if (returnFocus) toggle.focus();
   }
   if (toggle && navigation) {
     toggle.addEventListener('click', () => setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-    navigation.addEventListener('click', event => { if (event.target.closest('a')) setMenuOpen(false); });
+    navigation.addEventListener('click', event => { if (event.target.closest('a, [data-language]')) setMenuOpen(false); });
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setMenuOpen(false, true);
+      if (event.key !== 'Escape') return;
+      const openDropdown = dropdowns.find(dropdown => dropdown.open);
+      if (openDropdown) {
+        openDropdown.open = false;
+        openDropdown.querySelector('summary').focus();
+      } else if (toggle.getAttribute('aria-expanded') === 'true') setMenuOpen(false, true);
     });
     document.addEventListener('click', event => { if (header && !header.contains(event.target)) setMenuOpen(false); });
     const desktop = window.matchMedia('(min-width: 56rem)');
     desktop.addEventListener('change', event => { if (event.matches) setMenuOpen(false); });
   }
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('toggle', () => {
+      if (dropdown.open) {
+        fitSolutionsMenu();
+        closeDropdowns(dropdown);
+      }
+    });
+  });
+  window.addEventListener('resize', fitSolutionsMenu);
+  window.addEventListener('talaria:languagechange', fitSolutionsMenu);
+  fitSolutionsMenu();
+  header?.addEventListener('focusout', event => {
+    if (!header.contains(event.relatedTarget)) {
+      closeDropdowns();
+      setMenuOpen(false);
+    }
+  });
+  document.querySelectorAll('.nav-product-link, .nav-menu-link').forEach(link => {
+    if (new URL(link.href).pathname === window.location.pathname) link.setAttribute('aria-current', 'page');
+  });
   function updateHeader() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 12); }
   updateHeader();
   window.addEventListener('scroll', updateHeader, {passive: true});
-  if ('IntersectionObserver' in window) {
-    const visible = new Map();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) visible.set(entry.target.id, entry.target);
-        else visible.delete(entry.target.id);
-      });
-      const current = [...visible.values()].sort((a, b) => Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top))[0];
-      links.forEach(link => {
-        if (current && link.getAttribute('href') === '#' + current.id) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      });
-    }, {rootMargin: '-15% 0px -45% 0px', threshold: 0});
-    document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
-  }
   const clients = document.getElementById('career-viewport');
   const clientsTrack = clients?.querySelector('.clients-track');
   const clientsList = clients?.querySelector('.clients-list');

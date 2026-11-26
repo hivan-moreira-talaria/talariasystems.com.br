@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>Capacidade e Rightsizing — dimensionamento de recursos</title>
+  <defs>
+    <linearGradient id="capacity-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="capacity-face" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a37bce"/><stop offset="1" stop-color="#765198"/></linearGradient>
+  </defs>
+  <path d="m64 74 53 25-53 25-53-25Z" fill="#30243e" stroke="#b392f0" stroke-opacity=".25"/>
+  <path d="m35 82 29 14v15L35 97Z" fill="#654586"/>
+  <path d="m64 96 29-14v15l-29 14Z" fill="url(#capacity-face)"/>
+  <path d="m64 68 29 14-29 14-29-14Z" fill="url(#capacity-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="m35 58 29 14v15L35 73Z" fill="#654586"/>
+  <path d="m64 72 29-14v15L64 87Z" fill="url(#capacity-face)"/>
+  <path d="m64 44 29 14-29 14-29-14Z" fill="url(#capacity-top)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="m64 18 29 14-29 14-29-14Z" fill="#b392f0" fill-opacity=".08"/>
+  <path d="m64 18 29 14-29 14-29-14Zm-29 14v15l29 14 29-14V32M64 46v15" stroke="#cfb4f4" stroke-width="1.5" stroke-dasharray="3 4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m42 67 12 6m-12 18 12 6m19-19 11-5m-11 29 11-5" stroke="#eadbff" stroke-opacity=".65" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M104 28h8v71h-8m3-47h5m-5 24h5" stroke="#b392f0" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M104 52h8" stroke="#f4b860" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="22" cy="69" r="2.5" fill="#b392f0" fill-opacity=".6"/>
+</svg>
