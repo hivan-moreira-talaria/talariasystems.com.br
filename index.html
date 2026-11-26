@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="tool-tooltips.js" defer></script>
   <script src="locales/catalog.js" defer></script>
   <script src="i18n.js" defer></script>
 </head>
@@ -195,54 +196,54 @@
         <div class="solutions-grid">
           <article class="solution" aria-labelledby="tools-title">
             <div class="solution-visual solution-visual--tools" aria-hidden="true">
-              <img src="branding/exploracoes-ferramentas/ferramentas-v1-plataforma-modular-transparente-v2.png" alt="" width="1984" height="793" loading="lazy" decoding="async">
+              <img src="branding/assets/ferramentas-plataforma-v2.svg" alt="" width="480" height="250" loading="lazy" decoding="async">
             </div>
             <div class="solution-copy">
               <h3 id="tools-title" data-i18n="common.nav.tools">Ferramentas</h3>
-              <p data-i18n="home.solutions.tools">Soluções para automatizar análises e relatórios de performance, comparar resultados e manter o histórico acessível.</p>
               <nav class="tool-logos" aria-label="Ferramentas" data-i18n-aria-label="common.nav.tools">
-              <a class="tool-logo-link" href="ferramentas/aipm/index.html" aria-label="Conhecer a AIPM" data-i18n-aria-label="common.aipmLink">
+              <div class="tool-card tool-card--aipm" data-tool-card>
+              <a class="tool-logo-link" href="ferramentas/aipm/index.html" aria-label="Conhecer a AIPM" data-i18n-aria-label="common.aipmLink" aria-describedby="tool-summary-aipm">
                 <svg viewBox="250 200 1050 600" aria-hidden="true" focusable="false">
                   <defs><filter id="aipm-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs>
                   <image href="branding/ferramentas/aipm/marca-original.png" width="1536" height="1024" filter="url(#aipm-home-mark-color)"/>
                 </svg>
                 <span>AIPM</span>
               </a>
-              <a class="tool-logo-link tool-logo-link--echo" href="ferramentas/echo/index.html" aria-label="Conhecer a Echo" data-i18n-aria-label="common.echoLink">
+              <button class="tool-summary-button" type="button" data-tool-summary aria-label="Resumo da AIPM" data-i18n-aria-label="home.tools.aipm.summaryLabel" aria-controls="tool-summary-aipm" aria-describedby="tool-summary-aipm" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3H3v4m14-4h4v4M3 17v4h4m14-4v4h-4M12 11v6"/><circle cx="12" cy="7" r=".8"/></svg></button>
+              </div>
+              <div class="tool-card tool-card--echo" data-tool-card>
+              <a class="tool-logo-link tool-logo-link--echo" href="ferramentas/echo/index.html" aria-label="Conhecer a Echo" data-i18n-aria-label="common.echoLink" aria-describedby="tool-summary-echo">
                 <svg viewBox="150 175 1175 700" aria-hidden="true" focusable="false">
                   <defs><filter id="echo-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs>
                   <image href="branding/ferramentas/echo/simbolo.png" width="1536" height="1024" filter="url(#echo-home-mark-color)"/>
                 </svg>
                 <span translate="no">Echo</span>
               </a>
-              <a class="tool-logo-link tool-logo-link--ariadne" href="ferramentas/ariadne/index.html" aria-label="Conhecer a Ariadne" data-i18n-aria-label="common.ariadneLink">
-                <svg viewBox="20 250 1490 550" aria-hidden="true" focusable="false"><defs><filter id="ariadne-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs><image href="branding/ferramentas/ariadne/simbolo.png" width="1536" height="1024" filter="url(#ariadne-home-mark-color)"/></svg>
+              <button class="tool-summary-button" type="button" data-tool-summary aria-label="Resumo da Echo" data-i18n-aria-label="home.tools.echo.summaryLabel" aria-controls="tool-summary-echo" aria-describedby="tool-summary-echo" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3H3v4m14-4h4v4M3 17v4h4m14-4v4h-4M12 11v6"/><circle cx="12" cy="7" r=".8"/></svg></button>
+              </div>
+              <div class="tool-card tool-card--ariadne" data-tool-card>
+              <a class="tool-logo-link tool-logo-link--ariadne" href="ferramentas/ariadne/index.html" aria-label="Conhecer a Ariadne" data-i18n-aria-label="common.ariadneLink" aria-describedby="tool-summary-ariadne">
+                <svg viewBox="20 250 1490 550" aria-hidden="true" focusable="false"><defs><filter id="ariadne-home-mark-color" color-interpolation-filters="sRGB"><feMorphology in="SourceAlpha" operator="dilate" radius="2" result="mark"/><feComponentTransfer in="mark" result="mark-contrast"><feFuncA type="linear" slope="1.35"/></feComponentTransfer><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="mark-contrast" operator="in"/></filter></defs><image href="branding/ferramentas/ariadne/simbolo.png" width="1536" height="1024" filter="url(#ariadne-home-mark-color)"/></svg>
                 <span translate="no">Ariadne</span>
               </a>
-              <a class="tool-logo-link tool-logo-link--chronos" href="ferramentas/chronos/index.html" aria-label="Conhecer a Chronos" data-i18n-aria-label="common.chronosLink">
+              <button class="tool-summary-button" type="button" data-tool-summary aria-label="Resumo da Ariadne" data-i18n-aria-label="home.tools.ariadne.summaryLabel" aria-controls="tool-summary-ariadne" aria-describedby="tool-summary-ariadne" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3H3v4m14-4h4v4M3 17v4h4m14-4v4h-4M12 11v6"/><circle cx="12" cy="7" r=".8"/></svg></button>
+              </div>
+              <div class="tool-card tool-card--chronos" data-tool-card>
+              <a class="tool-logo-link tool-logo-link--chronos" href="ferramentas/chronos/index.html" aria-label="Conhecer a Chronos" data-i18n-aria-label="common.chronosLink" aria-describedby="tool-summary-chronos">
                 <svg viewBox="50 0 1436 1024" aria-hidden="true" focusable="false"><defs><filter id="chronos-home-mark-color" color-interpolation-filters="sRGB"><feFlood flood-color="currentColor" result="ink"/><feComposite in="ink" in2="SourceGraphic" operator="in"/></filter></defs><image href="branding/ferramentas/chronos/simbolo.png" width="1536" height="1024" filter="url(#chronos-home-mark-color)"/></svg>
                 <span translate="no">Chronos</span>
               </a>
+              <button class="tool-summary-button" type="button" data-tool-summary aria-label="Resumo da Chronos" data-i18n-aria-label="home.tools.chronos.summaryLabel" aria-controls="tool-summary-chronos" aria-describedby="tool-summary-chronos" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3H3v4m14-4h4v4M3 17v4h4m14-4v4h-4M12 11v6"/><circle cx="12" cy="7" r=".8"/></svg></button>
+              </div>
               </nav>
             </div>
           </article>
           <article class="solution" aria-labelledby="consulting-title">
-            <div class="solution-visual" aria-hidden="true">
-              <svg viewBox="0 0 600 240" focusable="false">
-                <defs><linearGradient id="consulting-surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c4a5ed"></stop><stop offset="1" stop-color="#76529e"></stop></linearGradient></defs>
-                <path d="M300 72 444 142 300 212 156 142Z" fill="#654586" stroke="#b392f0" stroke-opacity=".25"></path>
-                <path d="M300 51 444 121 300 191 156 121Z" fill="#8560ac" stroke="#d7c1ff" stroke-opacity=".25"></path>
-                <path d="M300 30 444 100 300 170 156 100Z" fill="url(#consulting-surface)" stroke="#f0eaff" stroke-opacity=".25"></path>
-                <path d="M228 65 372 135M372 65 228 135" fill="none" stroke="#f0eaff" stroke-opacity=".2"></path>
-                <circle cx="300" cy="85" r="46" fill="#241a35" fill-opacity=".65" stroke="#f0eaff" stroke-width="3"></circle>
-                <circle cx="300" cy="85" r="19" fill="none" stroke="#c7a9f3" stroke-width="1.5"></circle>
-                <path d="M278 85H322M300 63V107" fill="none" stroke="#c7a9f3" stroke-width="1.5"></path>
-                <path d="M333 118 383 168" fill="none" stroke="#d7c1ff" stroke-width="8" stroke-linecap="round"></path>
-              </svg>
+            <div class="solution-visual solution-visual--consulting" aria-hidden="true">
+              <img src="branding/assets/consultoria-lupa-alvo-v1.svg" alt="" width="420" height="240" loading="lazy" decoding="async">
             </div>
             <div class="solution-copy">
               <h3 id="consulting-title" data-i18n="home.solutions.consultingTitle">Consultoria</h3>
-              <p data-i18n="home.solutions.consulting">Análise especializada para entender gargalos, orientar o dimensionamento e ajustar o uso dos recursos.</p>
               <nav class="consulting-services" aria-label="Serviços" data-i18n-aria-label="common.nav.services">
                 <a href="servicos/performance/index.html"><img src="branding/icons/services/performance.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="common.performance">Performance</span></a>
                 <a href="servicos/capacidade/index.html"><img src="branding/icons/services/capacidade.svg" alt="" width="128" height="128" loading="lazy" decoding="async"><span data-i18n="common.capacity">Capacidade &amp; Rightsizing</span></a>
@@ -254,6 +255,57 @@
         </div>
       </div>
     </section>
+    <div class="tool-tooltip tool-tooltip--aipm" id="tool-summary-aipm" role="tooltip" hidden>
+      <strong class="tool-tooltip-title" translate="no">AIPM</strong>
+      <p data-i18n="home.tools.aipm.summary">A AIPM centraliza métricas, análises e histórico por projeto para transformar os resultados dos testes em relatórios de performance com IA. A equipe revisa as conclusões e usa as evidências para orientar as próximas decisões.</p>
+      <p class="tool-tooltip-label" data-i18n="home.tools.features">Funcionalidades</p>
+      <ul class="tool-tooltip-features">
+        <li data-i18n="aipm.analysis.point1">Análises de performance geradas automaticamente por IA.</li>
+        <li data-i18n="aipm.analysis.point2">Relatórios automáticos a partir dos resultados.</li>
+        <li data-i18n="aipm.analysis.point3">Dashboards para explorar métricas e apoiar a investigação.</li>
+        <li data-i18n="home.tools.aipm.planning">Planejamento de cenários, perfil de carga e critérios de sucesso.</li>
+        <li data-i18n="aipm.projects.point1">Agendamento e acompanhamento das execuções.</li>
+        <li data-i18n="aipm.projects.point3">Histórico centralizado para consultar evidências.</li>
+        <li data-i18n="home.tools.aipm.scripts">Geração de scripts com IA (em desenvolvimento).</li>
+      </ul>
+    </div>
+    <div class="tool-tooltip tool-tooltip--echo" id="tool-summary-echo" role="tooltip" hidden>
+      <strong class="tool-tooltip-title" translate="no">Echo</strong>
+      <p data-i18n="home.tools.echo.summary">A Echo aproxima a avaliação de performance da rotina de QA. Enquanto o teste funcional é conduzido na sessão principal, as ações são replicadas em sessões paralelas com dados distintos, gerando carga e um relatório ao final.</p>
+      <p class="tool-tooltip-label" data-i18n="home.tools.features">Funcionalidades</p>
+      <ul class="tool-tooltip-features">
+        <li data-i18n="home.tools.echo.realtime">Replicação das ações do QA em tempo real.</li>
+        <li data-i18n="home.tools.echo.sessions">Quantidade de sessões e dados distintos por sessão.</li>
+        <li data-i18n="home.tools.echo.load">Geração de carga durante o teste funcional.</li>
+        <li data-i18n="echo.report.point1">Tempos de resposta: média, p90 e p95.</li>
+        <li data-i18n="echo.report.point2">Carregamento do frontend e marcos como DOM carregado.</li>
+        <li data-i18n="home.tools.echo.report">Relatório com visão agregada, erros e detalhe por sessão.</li>
+      </ul>
+    </div>
+    <div class="tool-tooltip tool-tooltip--ariadne" id="tool-summary-ariadne" role="tooltip" hidden>
+      <strong class="tool-tooltip-title" translate="no">Ariadne</strong>
+      <p data-i18n="home.tools.ariadne.summary">A Ariadne explora os fluxos de um site a partir de uma URL, com instruções do usuário ou descoberta por IA. As métricas coletadas com sitespeed.io e a análise por IA são reunidas em um mapa interativo das páginas e chamadas observadas.</p>
+      <p class="tool-tooltip-label" data-i18n="home.tools.features">Funcionalidades</p>
+      <ul class="tool-tooltip-features">
+        <li data-i18n="home.tools.ariadne.discovery">Exploração de fluxos por instruções ou descoberta por IA.</li>
+        <li data-i18n="home.tools.ariadne.metrics">Coleta de métricas com sitespeed.io.</li>
+        <li data-i18n="home.tools.ariadne.analysis">Análise de performance de páginas e chamadas por IA.</li>
+        <li data-i18n="home.tools.ariadne.map">Mapa interativo das conexões observadas.</li>
+        <li data-i18n="home.tools.ariadne.inspection">Métricas por ponto do mapa para orientar a investigação.</li>
+      </ul>
+    </div>
+    <div class="tool-tooltip tool-tooltip--chronos" id="tool-summary-chronos" role="tooltip" hidden>
+      <strong class="tool-tooltip-title" translate="no">Chronos</strong>
+      <p data-i18n="home.tools.chronos.summary">A Chronos executa scripts ou cenários existentes de forma recorrente, independentemente dos deploys. O histórico constrói uma baseline para reconhecer desvios, enquanto relatórios periódicos apoiam a investigação do responsável e o acompanhamento de cada aplicação.</p>
+      <p class="tool-tooltip-label" data-i18n="home.tools.features">Funcionalidades</p>
+      <ul class="tool-tooltip-features">
+        <li data-i18n="home.tools.chronos.schedule">Agendamento de scripts ou cenários existentes.</li>
+        <li data-i18n="home.tools.chronos.runs">Execuções recorrentes independentes dos deploys.</li>
+        <li data-i18n="home.tools.chronos.baseline">Histórico de performance e construção da baseline.</li>
+        <li data-i18n="home.tools.chronos.comparison">Comparação de resultados e identificação de desvios.</li>
+        <li data-i18n="home.tools.chronos.reports">Relatórios periódicos por aplicação, com saúde, problemas e direções de investigação.</li>
+      </ul>
+    </div>
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
         <div class="about-copy">

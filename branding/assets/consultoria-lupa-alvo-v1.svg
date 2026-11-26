@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="240" viewBox="0 0 420 240" fill="none">
+  <title>Consultoria — análise com foco</title>
+  <defs>
+    <linearGradient id="consulting-rim" x1="156" y1="28" x2="248" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="consulting-handle" x1="244" y1="126" x2="322" y2="204" gradientUnits="userSpaceOnUse"><stop stop-color="#cfb2f4"/><stop offset="1" stop-color="#9670c6"/></linearGradient>
+    <linearGradient id="consulting-lens" x1="170" y1="48" x2="229" y2="120" gradientUnits="userSpaceOnUse"><stop stop-color="#383041"/><stop offset="1" stop-color="#292330"/></linearGradient>
+  </defs>
+  <path d="m29 145 181 83 181-83v7l-181 83-181-83Z" fill="#211d29"/>
+  <path d="m210 62 181 83-181 83L29 145Z" fill="#2b2535" stroke="#b392f0" stroke-opacity=".28"/>
+  <path d="m210 79 145 66-145 66-145-66Z" stroke="#b392f0" stroke-opacity=".12"/>
+  <path d="m98 163 30 14 31-14m100-42 44-20 42 19m-154 78 19 9 18-8" stroke="#b392f0" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m79 145 17-8m240 20 17-8m-205 42 13 6" stroke="#cfb4f4" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="m122 132 17-8m-9-5v18m172-10 17 8m-9-13v18" stroke="#b392f0" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="m237 137 14-14 74 74q6 6 0 11l-8 8q-5 5-11-1Z" fill="#654586"/>
+  <path d="m237 130 14-14 74 74q6 6 0 11l-8 8q-5 5-11-1Z" fill="url(#consulting-handle)" stroke="#eadbff" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="m302 188 14-14m-9 20 14-14" stroke="#eadbff" stroke-opacity=".5" stroke-width="1.5"/>
+  <circle cx="202" cy="90" r="57" fill="#654586" stroke="#b392f0" stroke-opacity=".3"/>
+  <circle cx="202" cy="83" r="57" fill="url(#consulting-rim)" stroke="#efddff" stroke-opacity=".5" stroke-width="1.2"/>
+  <circle cx="202" cy="83" r="44" fill="url(#consulting-lens)" stroke="#765198" stroke-width="2"/>
+  <circle cx="202" cy="83" r="39" stroke="#cfb4f4" stroke-opacity=".13"/>
+  <path d="M160 60a48 48 0 0 1 47-25" stroke="#f0eaff" stroke-opacity=".65" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="202" cy="83" r="28" stroke="#cfb4f4" stroke-opacity=".7" stroke-width="1.5"/>
+  <circle cx="202" cy="83" r="15" stroke="#cfb4f4" stroke-opacity=".7" stroke-width="1.5"/>
+  <path d="M202 45v22m0 32v22m-38-38h22m32 0h22" stroke="#cfb4f4" stroke-opacity=".65" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M202 55a28 28 0 0 1 28 28" stroke="#f4b860" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="202" cy="83" r="4.5" fill="#f4b860"/>
+  <path d="m162 48 8-5m68 70 5-8" stroke="#eadbff" stroke-opacity=".5" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

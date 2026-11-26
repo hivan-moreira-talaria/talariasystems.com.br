@@ -816,16 +816,15 @@ h1,h2,h3,p {
   height:100%;
   max-width:34rem
 }
-.solution-visual--tools img {
+.solution-visual--tools img,
+.solution-visual--consulting img {
   display:block;
-  width:78%;
-  max-width:25rem;
-  height:76%;
+  width:82%;
+  max-width:27rem;
+  height:88%;
   min-width:0;
   min-height:0;
-  object-fit:contain;
-  opacity:.84;
-  filter:saturate(.78) contrast(.92)
+  object-fit:contain
 }
 .solution-copy {
   display:flex;
@@ -895,6 +894,126 @@ h1,h2,h3,p {
 }
 .tool-logos .tool-logo-link {
   margin-top:0
+}
+.tool-card {
+  position:relative;
+  min-width:0
+}
+.tool-card--aipm,.tool-tooltip--aipm {--tool-accent:#6bdad4}
+.tool-card--echo,.tool-tooltip--echo {--tool-accent:#8caeff}
+.tool-card--ariadne,.tool-tooltip--ariadne {--tool-accent:#f0a08c}
+.tool-card--chronos,.tool-tooltip--chronos {--tool-accent:#e8c879}
+.tool-summary-button {
+  position:absolute;
+  top:.15rem;
+  right:.15rem;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  width:2.25rem;
+  height:2.25rem;
+  padding:0;
+  border:0;
+  border-radius:.35rem;
+  color:var(--tool-accent);
+  background:transparent;
+  cursor:pointer;
+  opacity:.7;
+  transition:background .2s,opacity .2s
+}
+.tool-summary-button svg {
+  width:1rem;
+  height:1rem;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.4;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+.tool-summary-button:hover,.tool-summary-button:focus-visible,.tool-summary-button[aria-expanded="true"] {
+  opacity:1;
+  background:color-mix(in srgb,var(--tool-accent) 12%,transparent)
+}
+.tool-tooltip {
+  position:fixed;
+  z-index:70;
+  width:min(36rem,calc(100vw - 2rem));
+  max-height:calc(100dvh - 2rem);
+  overflow:auto;
+  padding:1.6rem;
+  border:1px solid color-mix(in srgb,var(--tool-accent) 48%,transparent);
+  border-radius:.35rem;
+  background:linear-gradient(90deg,#ffffff04 1px,transparent 1px) 0 0/1.5rem 1.5rem,linear-gradient(#ffffff04 1px,transparent 1px) 0 0/1.5rem 1.5rem,linear-gradient(135deg,#282532,#19171f);
+  box-shadow:0 .8rem 2.5rem #08070c66,0 0 1.2rem color-mix(in srgb,var(--tool-accent) 9%,transparent);
+  color:#f0eaf6;
+  isolation:isolate;
+  animation:tool-tooltip-open .26s ease-out both
+}
+.tool-tooltip[hidden],.tool-summary-button[hidden] {
+  display:none
+}
+.tool-tooltip::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0 auto 0 0;
+  width:1px;
+  background:var(--tool-accent);
+  box-shadow:0 0 12px 2px color-mix(in srgb,var(--tool-accent) 35%,transparent);
+  opacity:0;
+  pointer-events:none;
+  animation:tool-tooltip-scan .42s ease-out both
+}
+.tool-tooltip::after {
+  content:"";
+  position:absolute;
+  inset:.35rem;
+  background:linear-gradient(var(--tool-accent),var(--tool-accent)) left top/10px 1px no-repeat,linear-gradient(var(--tool-accent),var(--tool-accent)) left top/1px 10px no-repeat,linear-gradient(var(--tool-accent),var(--tool-accent)) right bottom/10px 1px no-repeat,linear-gradient(var(--tool-accent),var(--tool-accent)) right bottom/1px 10px no-repeat;
+  opacity:.7;
+  pointer-events:none
+}
+.tool-tooltip-title {
+  display:block;
+  margin-bottom:.7rem;
+  font:400 1.15rem/1.5 var(--display);
+  color:var(--tool-accent)
+}
+.tool-tooltip p {
+  margin:0;
+  color:#ded8e7;
+  font-size:1rem;
+  line-height:1.65
+}
+.tool-tooltip .tool-tooltip-label {
+  margin:1.2rem 0 .6rem;
+  padding-top:1rem;
+  border-top:1px solid color-mix(in srgb,var(--tool-accent) 20%,transparent);
+  color:var(--tool-accent);
+  font-size:.875rem;
+  font-weight:600;
+  letter-spacing:.06em
+}
+.tool-tooltip-features {
+  display:grid;
+  gap:.45rem;
+  margin:0;
+  padding-left:1.2rem;
+  color:#ded8e7;
+  font-size:1rem;
+  line-height:1.55;
+  list-style-type:square
+}
+.tool-tooltip-features li::marker {
+  color:var(--tool-accent)
+}
+@keyframes tool-tooltip-open {
+  from {opacity:0;clip-path:inset(0 100% 0 0)}
+  to {opacity:1;clip-path:inset(0 0 0 0)}
+}
+@keyframes tool-tooltip-scan {
+  0% {left:0;opacity:0}
+  20% {opacity:.65}
+  100% {left:100%;opacity:0}
 }
 .tool-logo-link {
   display:flex;

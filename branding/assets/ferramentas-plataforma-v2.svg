@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="250" viewBox="0 0 480 250" fill="none">
+  <title>Ferramentas — análise, recursos e relatórios conectados</title>
+  <defs>
+    <linearGradient id="tools-frame" x1="181" y1="55" x2="278" y2="153" gradientUnits="userSpaceOnUse"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+    <linearGradient id="tools-symbol" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d0ff"/><stop offset="1" stop-color="#ad86df"/></linearGradient>
+  </defs>
+  <path d="m30 145 210 96 210-96v6l-210 96-210-96Z" fill="#211d29"/>
+  <path d="m240 49 210 96-210 96L30 145Z" fill="#2b2535" stroke="#b392f0" stroke-opacity=".28"/>
+  <path d="m240 66 172 79-172 79-172-79Z" stroke="#b392f0" stroke-opacity=".12"/>
+  <path d="m95 162 48 23 40-19 42 20 48-23 43 20 43-20" stroke="#b392f0" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m158 190 22 10 44-20m57 7 19 9 32-15" stroke="#b392f0" stroke-opacity=".25" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m80 177 16 7m127 38 17 8 17-8m111-46 16-7" stroke="#cfb4f4" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="m178 170 7-4 8 4-8 4Zm113 4 8-4 8 4-8 4Z" fill="#f4b860"/>
+  <path d="M67 88h66l12 12v50l-12 12H67l-12-12v-50Z" fill="#654586"/>
+  <path d="M67 81h66l12 12v50l-12 12H67l-12-12V93Z" fill="#493952" stroke="#cfb4f4" stroke-opacity=".65" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M59 94 69 84h62l10 10" stroke="#e2d0ff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 94h56l5 5v38l-5 5H72l-5-5V99Z" fill="#292330" stroke="#b392f0" stroke-opacity=".18"/>
+  <path d="M79 122h9v11h-9Zm17-10h9v21h-9Zm17-12h9v33h-9Z" fill="url(#tools-symbol)"/>
+  <path d="m78 114 15-8 12 2 17-15" stroke="#f0eaff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="122" cy="93" r="3" fill="#f4b860"/>
+  <path d="M189 63h76l18 18v66l-18 18h-76l-18-18V81Z" fill="#654586"/>
+  <path d="M189 55h76l18 18v66l-18 18h-76l-18-18V73Z" fill="url(#tools-frame)" stroke="#efddff" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M195 69h64l10 10v54l-10 10h-64l-10-10V79Z" fill="#30243e" stroke="#765198" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="m201 117 26 13 26-13v6l-26 13-26-13Z" fill="#765198"/>
+  <path d="m227 104 26 13-26 13-26-13Z" fill="url(#tools-symbol)" stroke="#efddff" stroke-opacity=".35"/>
+  <path d="m201 106 26 13 26-13v6l-26 13-26-13Z" fill="#765198"/>
+  <path d="m227 93 26 13-26 13-26-13Z" fill="url(#tools-symbol)" stroke="#efddff" stroke-opacity=".35"/>
+  <path d="m201 95 26 13 26-13v6l-26 13-26-13Z" fill="#765198"/>
+  <path d="m227 82 26 13-26 13-26-13Z" fill="url(#tools-symbol)" stroke="#efddff" stroke-opacity=".4"/>
+  <path d="M327 88h66l12 12v50l-12 12h-66l-12-12v-50Z" fill="#654586"/>
+  <path d="M327 81h66l12 12v50l-12 12h-66l-12-12V93Z" fill="#493952" stroke="#cfb4f4" stroke-opacity=".65" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="m319 94 10-10h62l10 10" stroke="#e2d0ff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M332 94h56l5 5v38l-5 5h-56l-5-5V99Z" fill="#292330" stroke="#b392f0" stroke-opacity=".18"/>
+  <path d="M351 97h24l5 5v25h-29Z" fill="#765198" stroke="#cfb4f4" stroke-opacity=".6" stroke-linejoin="round"/>
+  <path d="M344 103h24l5 5v25h-29Z" fill="#a37bce" stroke="#cfb4f4" stroke-opacity=".6" stroke-linejoin="round"/>
+  <path d="M337 109h24l5 5v25h-29Z" fill="url(#tools-symbol)" stroke="#efddff" stroke-opacity=".4" stroke-linejoin="round"/>
+  <path d="M344 119h13m-13 6h13m-13 6h8" stroke="#68468b" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="m46 122-9 4m377-3 9 4" stroke="#b392f0" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
