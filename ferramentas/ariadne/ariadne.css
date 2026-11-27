@@ -2,7 +2,7 @@
 .ariadne-page .eyebrow {color:var(--product-accent)}
 .ariadne-hero-art {position:relative;isolation:isolate;min-width:0;display:grid;align-content:center;align-self:stretch;min-height:27rem;padding-bottom:3rem}
 .ariadne-art-orbit {position:absolute;inset:5rem -1rem;border:1px solid #f0a08c20;border-radius:50%;transform:rotate(-18deg) scaleY(.65);z-index:-1}
-.ariadne-mark {display:block;width:115%;margin-left:-7%;height:auto;overflow:visible}
+.ariadne-mark {display:block;width:100%;height:auto;max-height:22rem;object-fit:contain}
 .ariadne-hero-art p {position:absolute;bottom:1rem;left:0;right:0;color:var(--product-accent);text-align:center;font-size:.875rem;margin:0}
 .ariadne-showcase {background:#221e27}
 .ariadne-section-intro {display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:4rem;margin-bottom:2.5rem}
@@ -71,7 +71,7 @@
 }
 @media(max-width:55.99rem) {
   .ariadne-hero-art {min-height:0;height:17rem;width:min(100%,36rem);justify-self:center;padding-bottom:2rem}
-  .ariadne-mark {width:100%;margin:0;max-height:14rem}
+  .ariadne-mark {max-height:14rem}
   .ariadne-art-orbit {inset:0 1rem 2rem}
   .ariadne-hero-art p {bottom:0}
   .ariadne-section-intro,.ariadne-exploration-grid {grid-template-columns:1fr;gap:1.25rem}

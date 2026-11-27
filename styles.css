@@ -1030,7 +1030,8 @@ h1,h2,h3,p {
   text-decoration:none;
   transition:background .2s,border-color .2s,transform .2s
 }
-.tool-logo-link svg {
+.tool-logo-link svg,
+.tool-logo-link img {
   display:block;
   flex:none;
   width:4.5rem;

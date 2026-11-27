@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 196">
+  <title>Ariadne — novelo</title>
+  <defs>
+    <!-- Os recortes simulam o espaço entre feixes que se sobrepõem. -->
+    <path id="contorno-feixe-obliquo" d="M140 116c50 22 78-4 102-39 16-23 28-33 43-29l18 31c-17 0-24 15-37 31-23 29-49 41-83 45l-34 6Z"/>
+    <path id="contorno-feixe-frontal" d="M190 27c-16 10-28 24-26 44 3 23 23 43 49 61 19 13 43 25 62 24l24-25c-18 7-45-3-71-19-18-11-32-29-35-45-4-18 4-33 27-43Z"/>
+    <path id="contorno-feixe-transversal" d="M240 29c-14 27-16 45-6 65 9 20 26 34 19 56-5 15-20 25-33 32l27-4c12-9 22-17 29-32 6-16-10-34-20-53-8-17-6-32 5-54Z"/>
+    <mask id="sob-feixe-obliquo" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="196">
+      <rect width="320" height="196" fill="white"/>
+      <use href="#contorno-feixe-obliquo" fill="black" stroke="black" stroke-width="4"/>
+    </mask>
+    <mask id="entre-voltas" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="196">
+      <rect width="320" height="196" fill="white"/>
+      <use href="#contorno-feixe-obliquo" fill="black" stroke="black" stroke-width="4"/>
+      <use href="#contorno-feixe-frontal" fill="black" stroke="black" stroke-width="5"/>
+      <use href="#contorno-feixe-transversal" fill="black" stroke="black" stroke-width="6"/>
+    </mask>
+    <mask id="sob-feixe-frontal" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="196">
+      <rect width="320" height="196" fill="white"/>
+      <use href="#contorno-feixe-frontal" fill="black" stroke="black" stroke-width="6"/>
+    </mask>
+    <mask id="sob-feixe-transversal" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="196">
+      <rect width="320" height="196" fill="white"/>
+      <use href="#contorno-feixe-transversal" fill="black" stroke="black" stroke-width="6" mask="url(#sob-feixe-obliquo)"/>
+    </mask>
+    <mask id="sob-microchip" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="196">
+      <rect width="320" height="196" fill="white"/>
+      <rect x="-12" y="-10" width="24" height="20" rx="3.5" transform="translate(173 102) rotate(28)" fill="black" stroke="black" stroke-width="5.5"/>
+    </mask>
+  </defs>
+
+  <g fill="none" stroke="#F0A08C" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Voltas do fundo, das quais saem os rastros superiores e inferiores. -->
+    <g mask="url(#entre-voltas)" stroke-width="3.5">
+      <path d="M78 49h17c36 0 63-9 88-19 22-9 42-9 61-3 38 12 63 45 64 77 2 36-24 64-57 74-26 8-58 5-82 1-15-3-29-4-42-4h-18"/>
+      <path d="M54 63h28c39 0 68-10 98-23 21-9 43-10 65-3 30 10 50 32 53 59 5 33-17 61-48 73-31 12-58 5-81 1-15-3-30-4-46-4h-39"/>
+      <path d="M35 77h45c38 0 63-9 95-23 23-10 48-12 68-3 26 12 42 35 43 57 2 26-15 49-42 55-23 5-52-1-72-4-15-2-34-2-50-2h-19"/>
+      <path d="M22 91h59c35 0 62-11 92-24 20-9 43-10 62-2 24 10 39 30 39 49 0 22-13 36-34 42-21 6-43-1-66-5-21-4-39-4-58-4H74"/>
+      <path stroke-width="2.9" d="M176 78c20-8 39-6 55 2 20 9 31 22 30 40-1 14-11 27-26 30-19 4-39-2-58-4"/>
+    </g>
+
+    <!-- Feixe oblíquo que continua diretamente no rastro central. -->
+    <g mask="url(#sob-feixe-frontal)">
+      <path stroke-width="4.2" d="M205.75 110.3C220.19 103.4 232.48 93.28 242 79c14-20 27-32 41-29"/>
+      <path stroke-width="3.5" d="M51 122h43c31 0 52 9 74 10 28 1 58-20 81-48 15-18 29-30 42-26"/>
+      <path stroke-width="3.9" d="M23 135h68c36 0 58 12 81 8 33-4 64-21 85-50 16-21 28-29 39-26"/>
+      <path stroke-width="3.15" d="M56 148h40c27 0 55 8 83 3 34-6 64-22 85-49 18-23 27-28 36-25"/>
+    </g>
+
+    <!-- As voltas frontais reaparecem do outro lado do feixe transversal. -->
+    <g mask="url(#sob-feixe-transversal)">
+      <g mask="url(#sob-microchip)">
+        <path stroke-width="4.15" d="M191 29c-17 10-27 24-23 44C170 84 177 95 185 105"/>
+        <path stroke-width="3.75" d="M204 25c-18 10-27 24-24 43 2 12 4 21 3 30"/>
+      </g>
+      <path stroke-width="4.15" d="M181.25 112.05C193 117 204 124 216 131c19 13 42 23 59 23"/>
+      <path stroke-width="3.75" d="M185.94 103.22C199 106 211 114 223 121c22 15 46 25 63 23"/>
+      <path stroke-width="3.6" d="M217 24c-18 9-28 21-25 40 3 19 18 34 38 47 22 15 51 25 68 21"/>
+    </g>
+
+    <!-- O feixe transversal passa sob a diagonal e por cima das voltas frontais. -->
+    <g mask="url(#sob-feixe-obliquo)">
+      <path stroke-width="3.6" d="M240 29c-14 27-16 45-6 65 9 20 26 34 19 56-5 15-20 25-33 32"/>
+      <path stroke-width="3.35" d="M251 34c-12 23-14 39-6 57 11 20 26 37 20 57-5 15-18 26-31 33"/>
+      <path stroke-width="3.2" d="M261 39c-11 22-13 37-5 54 10 19 26 37 20 53-7 15-17 23-29 32"/>
+    </g>
+
+    <!-- Dois fios do rastro entram no chip e continuam nas voltas frontais. -->
+    <path stroke-width="2.9" d="M73 99h18c16.12 0 31.16-2.7 45.68-6.85C147 89 156 88 164.75 91.96"/>
+    <path stroke-width="4.2" d="M29 110h67c15.66 0 27.62 2.02 39.2 4.88C145 117 153 107 160.06 100.79"/>
+    <g transform="translate(173 102) rotate(28)">
+      <rect x="-12" y="-10" width="24" height="20" rx="3.5" stroke-width="3.5"/>
+      <rect x="-5" y="-4" width="10" height="8" rx="1.5" fill="#F0A08C" stroke="none"/>
+    </g>
+  </g>
+
+  <g fill="#F0A08C">
+    <circle cx="65" cy="49" r="2.35"/>
+    <circle cx="43" cy="63" r="2.25"/>
+    <circle cx="23" cy="77" r="2.55"/>
+    <circle cx="11" cy="91" r="2.5"/>
+    <circle cx="17" cy="110" r="3"/>
+    <circle cx="40" cy="122" r="2.55"/>
+    <circle cx="12" cy="135" r="2.65"/>
+    <circle cx="45" cy="148" r="2.4"/>
+    <circle cx="72" cy="166" r="2.4"/>
+    <circle cx="98" cy="175" r="2.15"/>
+  </g>
+</svg>
